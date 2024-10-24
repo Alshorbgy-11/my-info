@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h1>Hello, I'm Abdulaziz Tarig</h1>
+        <p>I'm a web developer with a passion for creating beautiful and functional websites.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill">
+                <h3>HTML</h3>
+                <div class="progress-bar"><span style="width: 90%;"></span></div>
+            </div>
+            <div class="skill">
+                <h3>CSS</h3>
+                <div class="progress-bar"><span style="width: 80%;"></span></div>
+            </div>
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <div class="progress-bar"><span style="width: 75%;"></span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project" id="project1">
+            <h3>Project 1: Portfolio Website</h3>
+            <p>This project showcases a portfolio website built using HTML, CSS, and JavaScript.</p>
+            <button onclick="viewMore(1)">View More</button>
+        </div>
+        <div class="project" id="project2">
+            <h3>Project 2: JavaScript Game</h3>
+            <p>This project is a simple game created with JavaScript to improve interactivity and user engagement.</p>
+            <button onclick="viewMore(2)">View More</button>
+        </div>
+        <div class="project" id="project3">
+            <h3>Project 3: Responsive Design</h3>
+            <p>This project demonstrates a fully responsive website using CSS Grid and Flexbox.</p>
+            <button onclick="viewMore(3)">View More</button>
+        </div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="popupTitle"></h2>
+            <p id="popupDescription"></p>
+            <button class="next-project" onclick="nextProject()">Next Project</button>
+        </div>
+    </div>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+            <p id="formStatus"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 Abdulaziz Tarig</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
